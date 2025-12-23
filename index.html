@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MejoraCorp | Consultoría Estratégica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #050505;
+            --text-color: #ffffff;
+            --border-color: rgba(255, 255, 255, 0.2);
+            --accent-hover: #ffffff;
+            --text-hover: #050505;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Brutalist Grid Lines */
+        .border-grid {
+            border: 1px solid var(--border-color);
+        }
+        
+        .border-r-grid {
+            border-right: 1px solid var(--border-color);
+        }
+
+        .border-b-grid {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .border-t-grid {
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Hover Effects mimicking studio interactions */
+        .hover-invert {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .hover-invert:hover {
+            background-color: var(--accent-hover);
+            color: var(--text-hover);
+        }
+
+        /* Smooth scrolling text animation (Marquee) */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+
+        .text-justify-last-left {
+            text-align: justify;
+            text-align-last: left;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-white selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 mix-blend-difference bg-[#050505]/80 backdrop-blur-sm border-b-grid">
+        <div class="flex justify-between items-center h-16 px-4 md:px-8 max-w-[1920px] mx-auto">
+            <a href="#" class="text-xl font-bold tracking-tighter uppercase">MejoraCorp<span class="text-xs align-top">®</span></a>
+            <div class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest">
+                <a href="#expertos" class="hover:opacity-50 transition-opacity">Expertos</a>
+                <a href="#herramientas" class="hover:opacity-50 transition-opacity">Herramientas</a>
+                <a href="#acompanamiento" class="hover:opacity-50 transition-opacity">Acompañamiento</a>
+                <a href="#contacto" class="hover:opacity-50 transition-opacity">Contacto</a>
+            </div>
+            <a href="#contacto" class="md:hidden text-sm uppercase font-bold border-grid px-3 py-1">Menu</a>
+        </div>
+    </nav>
+
+    <!-- Main Wrapper -->
+    <main class="pt-16 max-w-[1920px] mx-auto border-r-grid border-l-grid min-h-screen">
+
+        <!-- Hero Section -->
+        <section id="expertos" class="relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[80vh]">
+                <!-- Main Statement -->
+                <div class="lg:col-span-8 p-6 md:p-12 lg:p-20 flex flex-col justify-center border-b-grid lg:border-r-grid lg:border-b-grid">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-[0.9] tracking-tighter uppercase mb-8">
+                        Eficiencia y productividad a un precio justo.
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-400 font-light max-w-2xl leading-relaxed">
+                        Mejoracorp es un pull de Expertos en diferentes áreas cómo estrategia, finanzas, compensación, administración, transformación digital, automatización e IA, todo aplicado a negocios.
+                    </p>
+                </div>
+
+                <!-- Secondary Info -->
+                <div class="lg:col-span-4 flex flex-col border-b-grid">
+                    <div class="flex-1 p-8 border-b-grid flex items-end">
+                        <p class="text-sm font-mono uppercase text-gray-500">
+                            Sin reuniones de recital.<br>
+                            Sin llenarse de exceles.<br>
+                            Sin power bi inútiles.<br>
+                            Sin diapositivas vacías.<br>
+                            <span class="text-white mt-2 block font-bold">Al grano y bien estructurado.</span>
+                        </p>
+                    </div>
+                    <div class="flex-1 p-8 flex flex-col justify-center bg-white text-black">
+                        <span class="text-xs uppercase font-bold tracking-widest mb-2">Misión</span>
+                        <p class="text-xl font-medium leading-tight">
+                            Queremos apoyar a los emprendedores y a las pymes a mejorar su negocio y llevarlo a la nueva era.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee / Divider -->
+        <div class="border-b-grid py-4 bg-white text-black overflow-hidden">
+            <div class="marquee-container">
+                <div class="marquee-content text-2xl md:text-4xl font-bold uppercase tracking-tighter">
+                    Estrategia — Finanzas — Compensación — Transformación Digital — Automatización — IA Aplicada — Estrategia — Finanzas — Compensación — Transformación Digital — Automatización — IA Aplicada —
+                </div>
+            </div>
+        </div>
+
+        <!-- About / Origin Story -->
+        <section class="grid grid-cols-1 md:grid-cols-2 border-b-grid">
+            <div class="p-8 md:p-16 border-b-grid md:border-b-0 md:border-r-grid">
+                <span class="block text-xs font-mono text-gray-500 mb-4 uppercase">[01] — Origen</span>
+                <h2 class="text-3xl md:text-4xl font-bold uppercase leading-none mb-6">Nuestra Historia</h2>
+            </div>
+            <div class="p-8 md:p-16 flex items-center">
+                <p class="text-lg md:text-xl font-light leading-relaxed text-gray-300">
+                    Quisimos crear Mejoracorp, porque tras 10 años de experiencia siendo empleados aportando a las áreas core en pymes y en grandes organizaciones, nos dimos cuenta que queremos llevar lo mejor de nuestra experiencia a los emprendedores y empresarios. Tenemos experiencia y queremos iniciar nuestra propia historia junto con aliados que quieran mejorar su negocio con nosotros.
+                </p>
+            </div>
+        </section>
+
+        <!-- Free Section (Grid) -->
+        <section id="herramientas">
+            <div class="border-b-grid p-4 md:p-8 bg-[#0a0a0a]">
+                <h2 class="text-sm md:text-base font-mono uppercase tracking-widest text-gray-400">Recursos Gratuitos</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Item 1 -->
+                <div class="group border-b-grid md:border-r-grid p-8 h-64 flex flex-col justify-between hover-invert cursor-pointer">
+                    <div class="flex justify-between items-start">
+                        <span class="font-mono text-xs">01</span>
+                        <svg class="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold uppercase">Flujo de caja</h3>
+                </div>
+                <!-- Item 2 -->
+                <div class="group border-b-grid lg:border-r-grid p-8 h-64 flex flex-col justify-between hover-invert cursor-pointer">
+                    <div class="flex justify-between items-start">
+                        <span class="font-mono text-xs">02</span>
+                        <svg class="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold uppercase">Análisis de Punto de Equilibrio</h3>
+                </div>
+                <!-- Item 3 -->
+                <div class="group border-b-grid md:border-r-grid lg:border-r-0 p-8 h-64 flex flex-col justify-between hover-invert cursor-pointer">
+                    <div class="flex justify-between items-start">
+                        <span class="font-mono text-xs">03</span>
+                        <svg class="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold uppercase">Presupuesto Mensual</h3>
+                </div>
+                <!-- Item 4 -->
+                <div class="group border-b-grid lg:border-r-grid p-8 h-64 flex flex-col justify-between hover-invert cursor-pointer">
+                    <div class="flex justify-between items-start">
+                        <span class="font-mono text-xs">04</span>
+                        <svg class="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold uppercase">Calculadora de Precios</h3>
+                </div>
+                <!-- Item 5 -->
+                <div class="group border-b-grid md:border-r-grid p-8 h-64 flex flex-col justify-between hover-invert cursor-pointer">
+                    <div class="flex justify-between items-start">
+                        <span class="font-mono text-xs">05</span>
+                        <svg class="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold uppercase">Simulador de Deuda</h3>
+                </div>
+                <!-- Item 6 -->
+                <div class="group border-b-grid p-8 h-64 flex flex-col justify-between hover-invert cursor-pointer">
+                    <div class="flex justify-between items-start">
+                        <span class="font-mono text-xs">06</span>
+                        <svg class="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold uppercase">Nómina y costos laborales</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="acompanamiento" class="py-20 border-b-grid">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="mb-16">
+                    <span class="text-xs font-mono text-gray-500 uppercase block mb-2">[02] — Acompañamiento</span>
+                    <h2 class="text-4xl md:text-5xl font-bold uppercase tracking-tight mb-6">
+                        ¡Transforma tu negocio con asesoría práctica y a precio justo!
+                    </h2>
+                    <p class="text-xl text-gray-400">Recibe entregables accionables en áreas clave para impulsar resultados:</p>
+                </div>
+
+                <div class="space-y-0">
+                    <!-- Service Item -->
+                    <div class="group border-t-grid py-8 flex flex-col md:flex-row md:items-baseline hover:pl-4 transition-all duration-300">
+                        <h3 class="text-2xl font-bold uppercase w-full md:w-1/3 mb-2 md:mb-0 group-hover:text-gray-300">Finanzas y control</h3>
+                        <p class="text-gray-400 font-light group-hover:text-white">Optimiza presupuesto, caja y KPIs.</p>
+                    </div>
+
+                    <!-- Service Item -->
+                    <div class="group border-t-grid py-8 flex flex-col md:flex-row md:items-baseline hover:pl-4 transition-all duration-300">
+                        <h3 class="text-2xl font-bold uppercase w-full md:w-1/3 mb-2 md:mb-0 group-hover:text-gray-300">Estrategia empresarial</h3>
+                        <p class="text-gray-400 font-light group-hover:text-white">Plan de 90 días con foco en prioridades.</p>
+                    </div>
+
+                    <!-- Service Item -->
+                    <div class="group border-t-grid py-8 flex flex-col md:flex-row md:items-baseline hover:pl-4 transition-all duration-300">
+                        <h3 class="text-2xl font-bold uppercase w-full md:w-1/3 mb-2 md:mb-0 group-hover:text-gray-300">Modelo de negocio</h3>
+                        <p class="text-gray-400 font-light group-hover:text-white">Mejora propuesta de valor y unit economics.</p>
+                    </div>
+
+                    <!-- Service Item -->
+                    <div class="group border-t-grid py-8 flex flex-col md:flex-row md:items-baseline hover:pl-4 transition-all duration-300">
+                        <h3 class="text-2xl font-bold uppercase w-full md:w-1/3 mb-2 md:mb-0 group-hover:text-gray-300">Pricing</h3>
+                        <p class="text-gray-400 font-light group-hover:text-white">Estructuras y paquetes para maximizar márgenes.</p>
+                    </div>
+
+                    <!-- Service Item -->
+                    <div class="group border-t-grid py-8 flex flex-col md:flex-row md:items-baseline hover:pl-4 transition-all duration-300">
+                        <h3 class="text-2xl font-bold uppercase w-full md:w-1/3 mb-2 md:mb-0 group-hover:text-gray-300">Compensación empleados</h3>
+                        <p class="text-gray-400 font-light group-hover:text-white">Incentivos que motivan y retienen talento.</p>
+                    </div>
+
+                    <!-- Service Item -->
+                    <div class="group border-t-grid py-8 flex flex-col md:flex-row md:items-baseline hover:pl-4 transition-all duration-300">
+                        <h3 class="text-2xl font-bold uppercase w-full md:w-1/3 mb-2 md:mb-0 group-hover:text-gray-300">Valoración financiera</h3>
+                        <p class="text-gray-400 font-light group-hover:text-white">Evalúa deuda e inversiones.</p>
+                    </div>
+
+                    <!-- Service Item -->
+                    <div class="group border-t-grid py-8 flex flex-col md:flex-row md:items-baseline hover:pl-4 transition-all duration-300">
+                        <h3 class="text-2xl font-bold uppercase w-full md:w-1/3 mb-2 md:mb-0 group-hover:text-gray-300">Automatización</h3>
+                        <p class="text-gray-400 font-light group-hover:text-white">Eficiencia operativa, evita errores y busca eficiencia ($).</p>
+                    </div>
+                    
+                    <!-- Service Item -->
+                    <div class="group border-t-grid py-8 flex flex-col md:flex-row md:items-baseline hover:pl-4 transition-all duration-300">
+                        <h3 class="text-2xl font-bold uppercase w-full md:w-1/3 mb-2 md:mb-0 group-hover:text-gray-300">Transformación digital</h3>
+                        <p class="text-gray-400 font-light group-hover:text-white">Herramientas y datos simples.</p>
+                    </div>
+
+                    <!-- Service Item -->
+                    <div class="group border-t-grid border-b-grid py-8 flex flex-col md:flex-row md:items-baseline hover:pl-4 transition-all duration-300">
+                        <h3 class="text-2xl font-bold uppercase w-full md:w-1/3 mb-2 md:mb-0 group-hover:text-gray-300">IA aplicada</h3>
+                        <p class="text-gray-400 font-light group-hover:text-white">Casos de uso y métricas para ventaja competitiva.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Footer -->
+        <footer id="contacto" class="bg-white text-black py-20 md:py-32 px-6 text-center">
+            <h2 class="text-4xl md:text-6xl lg:text-8xl font-bold uppercase tracking-tighter mb-8 leading-none">
+                ¿Listo para escalar?
+            </h2>
+            <p class="text-lg md:text-xl font-medium mb-12 max-w-2xl mx-auto">
+                Agenda tu sesión hoy y acelera tu crecimiento. Sin excusas, solo resultados.
+            </p>
+            <a href="#" class="inline-block border-2 border-black px-12 py-4 text-sm font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-colors duration-300">
+                Agendar Sesión Gratis Ahora
+            </a>
+            
+            <div class="mt-32 border-t border-black/10 pt-8 flex flex-col md:flex-row justify-between text-xs font-mono uppercase text-gray-500">
+                <p>&copy; 2026 MejoraCorp. Todos los derechos reservados.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-black">LinkedIn</a>
+                    <a href="#" class="hover:text-black">Instagram</a>
+                    <a href="#" class="hover:text-black">Email</a>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+</body>
+</html>
